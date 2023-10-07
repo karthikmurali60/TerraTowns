@@ -1,6 +1,7 @@
 tasks:
   - name: terraform
     before: |
+      source ./bin/set_tf_aliases
       source ./bin/install_terraform_cli
       source ./bin/generate_terraform_cloud_token 
   - name: aws-cli
