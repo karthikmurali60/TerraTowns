@@ -3,7 +3,8 @@ tasks:
     before: |
       source ./bin/set_tf_aliases
       source ./bin/install_terraform_cli
-      source ./bin/generate_terraform_cloud_token 
+      source ./bin/generate_terraform_cloud_token
+      cp $PROJECT_ROOT/terraform.tfvars.example $PROJECT_ROOT/terraform.tfvars
   - name: aws-cli
     env:
       AWS_CLI_AUTO_PROMPT: on-partial
